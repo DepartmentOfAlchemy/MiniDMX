@@ -16,6 +16,7 @@ trigger.pull = Pull.UP
 universe = doa_dmx.universe(DIRECTION_PIN, TX_PIN, 6)
 
 print("Sending DMX messages")
+universe.set_communication_direction(doa_dmx.DMX_WRITE_DIR)
 
 async def loop():
     cur_trigger = -1
