@@ -31,7 +31,7 @@ class universe():
         self.uart = digitalio.DigitalInOut(self.tx)
         self.uart.direction = digitalio.Direction.OUTPUT
         self.uart.value = 1
-        self.dmx_message = array('B', [0] * (6+1))
+        self.dmx_message = array('B', [0] * (self.max_channels + 1))
         asyncio.create_task(self.send_dmx())
 
     def set_communication_direction(self, direction):
