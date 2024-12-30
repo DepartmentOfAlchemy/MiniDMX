@@ -13,3 +13,11 @@ The channels are:
 When the trigger button is not pressed the fixture will have a 
 red light. When the trigger button is pressed the fixture will
 have a blue light.
+
+## Dependencies
+
+The `lib` directory in the repository contains the `doa_dmx.py` library that should be installed in the microcontroller's CircuitPython `lib` directory.
+
+The other dependencies that are required in the microcontroller's CircuitPython `lib` directory are:
+- asyncio
+- adafruit_ticks
